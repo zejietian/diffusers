@@ -16,7 +16,7 @@ def deprecate(*args, take_from: Optional[Union[Dict, Any]] = None, standard_warn
     for attribute, version_name in args:
         if version.parse(version.parse(__version__).base_version) >= version.parse(version_name):
             raise ValueError(
-                f"The deprecation tuple {(attribute, version_name, message)} should be removed since diffusers'"
+                f"The deprecation tuple {(attribute, version_name)} should be removed since diffusers'"
                 f" version {__version__} is >= {version_name}"
             )
 
