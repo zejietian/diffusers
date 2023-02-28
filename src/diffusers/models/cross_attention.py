@@ -258,10 +258,8 @@ class CrossAttention(nn.Module):
     def prepare_attention_mask(self, attention_mask, target_length, batch_size=None):
         if batch_size is None:
             deprecate(
-                "batch_size=None",
-                "0.0.15",
-                
-            )
+            
+          )
             batch_size = 1
 
         head_size = self.heads
