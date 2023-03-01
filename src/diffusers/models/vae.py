@@ -189,7 +189,7 @@ class Decoder(nn.Module):
 
         # post-process
         sample = self.conv_norm_out(sample)
-        sample = self.conv_act(sample)
+        sample = self.conv_act(sample, inplace=True)
         sample = self.conv_out(sample)
 
         return sample
